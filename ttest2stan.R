@@ -23,14 +23,13 @@ ttest2stan <- function(x,y,c=1,iter=2000,chains=4,warmup=1000){
   generated quantities{
     real delta;
     real d_over;
-    real d_over1;
+    real d_overC;
     delta <- mu2 - mu1;
-    d_over <- step(delta);
-    d_over1 <- if_else(delta>c,1,0);
+    d_over <- if_else(delta>0,1,0);
+    d_overC <- if_else(delta>c,1,0);
   }
   '
   model <- stan_model(model_code=stancode)
   fit <- sampling(model,data=datastan,iter=iter,chain = chains, warmup = warmup)
-  (print(fit))
   return(fit)
 }

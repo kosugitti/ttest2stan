@@ -5,4 +5,7 @@ y <- c(31.36,33.34,33.16,31.36,36.19,29.80,31.11,35.23,31.36,31.27,
 t.test(x,y)
 require(rstan)
 source("ttest2stan.R")
-ttest2stan(x,y,c=0,iter=10000,chains=2,warmup=500)
+fit <- ttest2stan(x,y,c=0,iter=10000,chains=2,warmup=500)
+
+require(shinyStan)
+launch_shinystan(fit)
