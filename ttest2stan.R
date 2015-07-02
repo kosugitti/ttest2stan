@@ -17,8 +17,8 @@ ttest2stan <- function(x,y,c=1,iter=2000,chains=4,warmup=1000){
     real<lower=0> sigma2;
   }
   model{
-    x1 ~ normal(mu1,sigma1^2);
-    x2 ~ normal(mu2,sigma2^2);
+    x1 ~ normal(mu1,sigma1);
+    x2 ~ normal(mu2,sigma2);
   }
   generated quantities{
     real delta;
