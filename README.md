@@ -6,7 +6,7 @@
 Rのもつt.test関数では，帰無仮説を$H_0:\mu_1=\mu_2$，対立仮説を$H_1:\mu_1 \neq \mu_2$としますが，このttest2stan関数は$\mu_1 > \mu_2$という仮説が成立する割合を返します。
 
 ## 書き方
-ttest2stan(x,y,c,iter=2000,warmup=1000,chains=4)
+ttest2stan(x,y,c,paied=FALSE,iter=2000,warmup=1000,chains=4)
 
 ## 引数
 
@@ -14,6 +14,7 @@ ttest2stan(x,y,c,iter=2000,warmup=1000,chains=4)
 ---- | -------------
 x,y  | 比較する二つのデータです
 c    | ttest2stanは第一の仮説として$\mu_2 - \mu_1 \gt 0$を検定しますが，第二の仮説として$\mu_2 - \mu_1 \gt c$を検証します。デフォルトは$0$になっていますが，実数を指定することが可能です。
+paierd | TRUEであれば対応のない,FALSEであれば対応のあるt検定をします。
 iter | stanで反復する回数を指定します。デフォルトは2000です。
 warmup | stanで反復する際のウォームアップ回数を指定します。デフォルトは1000です。
 chains | stanで構成するMCMCチェインの数を指定します。デフォルトは4です。
