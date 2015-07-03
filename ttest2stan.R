@@ -25,9 +25,11 @@ ttest2stan <- function(x,y,c=1,paired=FALSE,iter=2000,chains=4,warmup=1000){
       real delta;
       real d_over;
       real d_overC;
+      real cohen_d;
       delta <- mu2 - mu1;
       d_over <- if_else(delta>0,1,0);
       d_overC <- if_else(delta>c,1,0);
+      cohen_d <- delta /((sigma1^2*(N1-1)+sigma2^2*(N2-1)) /((N1-1)+(N2-1)))^0.5;
     }
     '    
   }else{
