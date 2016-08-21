@@ -1,9 +1,13 @@
-x <- rnorm(100,5,4)
-y <- rnorm(100,7,3)
+x <- rnorm(10,5,4)
+y <- rnorm(15,7,3)
 t.test(x,y)
 require(rstan)
+rstan_options(auto_write = TRUE)
+options(mc.cores = parallel::detectCores())
 source("ttest2stan.R")
 fit <- ttest2stan(x,y,c=0,iter=10000,chains=2,warmup=500)
+fit
+
 
 require(shinyStan)
 launch_shinystan(fit)
