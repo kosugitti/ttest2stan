@@ -26,10 +26,10 @@ ttest2stan <- function(x,y,c=1,paired=FALSE,iter=2000,chains=4,warmup=1000){
       real d_over;
       real d_overC;
       real cohen_d;
-      delta <- mu2 - mu1;
-      d_over <- if_else(delta>0,1,0);
-      d_overC <- if_else(delta>c,1,0);
-      cohen_d <- delta /((sigma1^2*(N1-1)+sigma2^2*(N2-1)) /((N1-1)+(N2-1)))^0.5;
+      delta = mu2 - mu1;
+      d_over = (delta>0? 1:0 );
+      d_overC = (delta>c? 1:0);
+      cohen_d = delta /((sigma1^2*(N1-1)+sigma2^2*(N2-1)) /((N1-1)+(N2-1)))^0.5;
     }
     '    
   }else{
@@ -47,12 +47,12 @@ ttest2stan <- function(x,y,c=1,paired=FALSE,iter=2000,chains=4,warmup=1000){
     transformed parameters{
       matrix[2,2] Sigma;
       vector<lower=0>[2] sigmasq;
-      sigmasq[1] <- pow(sigma[1],2);
-      sigmasq[2] <- pow(sigma[2],2);
-      Sigma[1,1] <- sigmasq[1];
-      Sigma[2,2] <- sigmasq[2];
-      Sigma[1,2] <- sigma[1] * sigma[2] * rho;
-      Sigma[2,1] <- sigma[2] * sigma[1] * rho;
+      sigmasq[1] = pow(sigma[1],2);
+      sigmasq[2] = pow(sigma[2],2);
+      Sigma[1,1] = sigmasq[1];
+      Sigma[2,2] = sigmasq[2];
+      Sigma[1,2] = sigma[1] * sigma[2] * rho;
+      Sigma[2,1] = sigma[2] * sigma[1] * rho;
     }
     model{
       for(i in 1:N)
@@ -61,8 +61,8 @@ ttest2stan <- function(x,y,c=1,paired=FALSE,iter=2000,chains=4,warmup=1000){
     generated quantities{
       real delta;
       real d_over;
-      delta <- mu[2] - mu[1];
-      d_over <- if_else(delta>0,1,0);
+      delta = mu[2] - mu[1];
+      d_over =(delta>0 ? 1 : 0);
     }
     '      
     }

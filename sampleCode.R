@@ -1,5 +1,5 @@
-x <- rnorm(10,5,4)
-y <- rnorm(10,7,3)
+x <- rnorm(100,5,4)
+y <- rnorm(100,7,3)
 t.test(x,y)
 require(rstan)
 source("ttest2stan.R")
