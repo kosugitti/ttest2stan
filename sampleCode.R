@@ -8,10 +8,6 @@ source("ttest2stan.R")
 fit <- ttest2stan(x,y,c=7,iter=10000,chains=2,warmup=500)
 fit
 
-
-require(shinystan)
-launch_shinystan(fit)
-
 ### Paired comparison
 x <- rnorm(10,0,3)
 e1 <- rnorm(10,0,3)
@@ -25,5 +21,5 @@ x1 <- y1 + 2.5
 x2 <- y2 + 5.5
 
 t.test(x1,x2,paierd=T)
-fit <- ttest2stan(x1,x2,paired=TRUE,iter=2000,chains=2,warmup=500)
-
+fit <- ttest2stan(x1,x2,c=1,paired=TRUE,iter=2000,chains=2,warmup=500)
+fit
