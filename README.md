@@ -1,3 +1,6 @@
+<script async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_CHTML">
+</script>
+
 # ttest2stan
 二群の平均値の差に関して，伝統的心理統計ではt検定を行いますが，ベイズ統計学的アプローチでは正規分布に関する事後分布から直接比較を行います。　
 
