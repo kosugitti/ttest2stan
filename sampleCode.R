@@ -5,11 +5,11 @@ require(rstan)
 rstan_options(auto_write = TRUE)
 options(mc.cores = parallel::detectCores())
 source("ttest2stan.R")
-fit <- ttest2stan(x,y,c=0,iter=10000,chains=2,warmup=500)
+fit <- ttest2stan(x,y,c=7,iter=10000,chains=2,warmup=500)
 fit
 
 
-require(shinyStan)
+require(shinystan)
 launch_shinystan(fit)
 
 ### Paired comparison
