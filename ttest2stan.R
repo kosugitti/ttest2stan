@@ -1,4 +1,4 @@
-ttest2stan <- function(x,y,c=1,paired=FALSE,iter=2000,chains=4,warmup=1000){
+ttest2stan <- function(x,y,c=0,paired=FALSE,iter=2000,chains=4,warmup=1000){
   nx <- length(x)
   ny <- length(y)
   if(paired==FALSE){
@@ -23,11 +23,9 @@ ttest2stan <- function(x,y,c=1,paired=FALSE,iter=2000,chains=4,warmup=1000){
     }
     generated quantities{
       real delta;
-      real d_over;
       real d_overC;
       real cohen_d;
       delta = mu2 - mu1;
-      d_over = (delta>0? 1:0 );
       d_overC = (delta>c? 1:0);
       cohen_d = delta /((sigma1^2*(N1-1)+sigma2^2*(N2-1)) /((N1-1)+(N2-1)))^0.5;
     }
@@ -60,9 +58,9 @@ ttest2stan <- function(x,y,c=1,paired=FALSE,iter=2000,chains=4,warmup=1000){
     }
     generated quantities{
       real delta;
-      real d_over;
+      real d_overC;
       delta = mu[2] - mu[1];
-      d_over =(delta>0 ? 1 : 0);
+      d_overC = (delta>c? 1:0);
     }
     '      
     }
