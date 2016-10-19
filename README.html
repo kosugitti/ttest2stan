@@ -93,6 +93,7 @@ button.code-folding-btn:focus {
 </style>
 
 
+
 <div class="container-fluid main-container">
 
 <!-- tabsets -->
@@ -139,34 +140,34 @@ $(document).ready(function () {
 </colgroup>
 <thead>
 <tr class="header">
-<th align="left">引数</th>
-<th align="left">説明</th>
+<th>引数</th>
+<th>説明</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">x,y</td>
-<td align="left">比較する二つのデータです</td>
+<td>x,y</td>
+<td>比較する二つのデータです</td>
 </tr>
 <tr class="even">
-<td align="left">c</td>
-<td align="left">ttest2stanは<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAAARBAAAAADCfRuBAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QADzoyPqMAAAAJcEhZcwAAAGQAAABkAA+Wxd0AAAAHdElNRQfgCBYBMiahLUkbAAABGklEQVQoz2P4TyJgoL6Gv/PQNST9/1+ArgpJ7A9DFky0mMEWpMH0/38XdA3IYjcMxM+DGY/Fd9eANLD//y+OrgFF7G8RUy+ILjwPdtJv7v9/Of83M8QBea93AwFQGCLWIgDTcoxhP1AfO8QPP/j+/+L5v+ZfCJC3gQEI/P9DxWZugKr/lch6////n7wQDd/0/3/nBylGchFU7AOEd1zB4j2QAqsCavhs//8R0ND/JUgaoGJgDf+KmGrBgj+gNjxg32lgBbRWBkkDVAys4bfYfqjfhWdPA2nY0MS0hPP//0nnkTRAxSA2wEWPMqiDNBSA3Pf/J7IFUDGYH9BiOghMT0S2ACqGQ4MamHZgQE5VELECBhZsGkgEJGsAAGrv1OEuwSp/AAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDE2LTA4LTIyVDAxOjUwOjM4LTA1OjAwopOCAgAAACV0RVh0ZGF0ZTptb2RpZnkAMjAxNi0wOC0yMlQwMTo1MDozOC0wNTowMNPOOr4AAAAhdEVYdHBzOkhpUmVzQm91bmRpbmdCb3gANjl4MTIrMjYxKzYyNGeCqF4AAAA3dEVYdHBzOkxldmVsAEFkb2JlRm9udC0xLjA6IEFyZXZTYW5zLU9ibGlxdWUgUmVsZWFzZSAwLjIxYQpiqkxdAAAAK3RFWHRwczpTcG90Q29sb3ItMABNYXRoRGVzaWduLUNILUJvbGQtU3ltYm9sLTEwK8b7iQAAAABJRU5ErkJggg==" alt="img" />を検証します。デフォルトではc=0になっており，有意差がないとする帰無仮説を検定する形になっています。cには実数を指定することが可能です。</td>
+<td>c</td>
+<td>ttest2stanは<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAAARBAAAAADCfRuBAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QADzoyPqMAAAAJcEhZcwAAAGQAAABkAA+Wxd0AAAAHdElNRQfgCBYBMiahLUkbAAABGklEQVQoz2P4TyJgoL6Gv/PQNST9/1+ArgpJ7A9DFky0mMEWpMH0/38XdA3IYjcMxM+DGY/Fd9eANLD//y+OrgFF7G8RUy+ILjwPdtJv7v9/Of83M8QBea93AwFQGCLWIgDTcoxhP1AfO8QPP/j+/+L5v+ZfCJC3gQEI/P9DxWZugKr/lch6////n7wQDd/0/3/nBylGchFU7AOEd1zB4j2QAqsCavhs//8R0ND/JUgaoGJgDf+KmGrBgj+gNjxg32lgBbRWBkkDVAys4bfYfqjfhWdPA2nY0MS0hPP//0nnkTRAxSA2wEWPMqiDNBSA3Pf/J7IFUDGYH9BiOghMT0S2ACqGQ4MamHZgQE5VELECBhZsGkgEJGsAAGrv1OEuwSp/AAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDE2LTA4LTIyVDAxOjUwOjM4LTA1OjAwopOCAgAAACV0RVh0ZGF0ZTptb2RpZnkAMjAxNi0wOC0yMlQwMTo1MDozOC0wNTowMNPOOr4AAAAhdEVYdHBzOkhpUmVzQm91bmRpbmdCb3gANjl4MTIrMjYxKzYyNGeCqF4AAAA3dEVYdHBzOkxldmVsAEFkb2JlRm9udC0xLjA6IEFyZXZTYW5zLU9ibGlxdWUgUmVsZWFzZSAwLjIxYQpiqkxdAAAAK3RFWHRwczpTcG90Q29sb3ItMABNYXRoRGVzaWduLUNILUJvbGQtU3ltYm9sLTEwK8b7iQAAAABJRU5ErkJggg==" alt="img" />を検証します。デフォルトではc=0になっており，有意差がないとする帰無仮説を検定する形になっています。cには実数を指定することが可能です。</td>
 </tr>
 <tr class="odd">
-<td align="left">paierd</td>
-<td align="left">TRUEであれば対応のある,FALSEであれば対応のないt検定をします。デフォルトはFALSEです。</td>
+<td>paierd</td>
+<td>TRUEであれば対応のある,FALSEであれば対応のないt検定をします。デフォルトはFALSEです。</td>
 </tr>
 <tr class="even">
-<td align="left">iter</td>
-<td align="left">stanで反復する回数を指定します。デフォルトは2000です。</td>
+<td>iter</td>
+<td>stanで反復する回数を指定します。デフォルトは2000です。</td>
 </tr>
 <tr class="odd">
-<td align="left">warmup</td>
-<td align="left">stanで反復する際のウォームアップ回数を指定します。デフォルトは1000です。</td>
+<td>warmup</td>
+<td>stanで反復する際のウォームアップ回数を指定します。デフォルトは1000です。</td>
 </tr>
 <tr class="even">
-<td align="left">chains</td>
-<td align="left">stanで構成するMCMCチェインの数を指定します。デフォルトは4です。</td>
+<td>chains</td>
+<td>stanで構成するMCMCチェインの数を指定します。デフォルトは4です。</td>
 </tr>
 </tbody>
 </table>
@@ -177,26 +178,26 @@ $(document).ready(function () {
 <table>
 <thead>
 <tr class="header">
-<th align="left">出力</th>
-<th align="left">説明</th>
+<th>出力</th>
+<th>説明</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">mu1,mu2</td>
-<td align="left">x,yの推定された平均値です</td>
+<td>mu1,mu2</td>
+<td>x,yの推定された平均値です</td>
 </tr>
 <tr class="even">
-<td align="left">sigma1,sigma2</td>
-<td align="left">x,yの推定された標準偏差です。</td>
+<td>sigma1,sigma2</td>
+<td>x,yの推定された標準偏差です。</td>
 </tr>
 <tr class="odd">
-<td align="left">delta</td>
-<td align="left">生成量での平均値の差です。</td>
+<td>delta</td>
+<td>生成量での平均値の差です。</td>
 </tr>
 <tr class="even">
-<td align="left">d_overC</td>
-<td align="left"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAAARBAAAAADCfRuBAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QADzoyPqMAAAAJcEhZcwAAAGQAAABkAA+Wxd0AAAAHdElNRQfgCBYBMiahLUkbAAABGklEQVQoz2P4TyJgoL6Gv/PQNST9/1+ArgpJ7A9DFky0mMEWpMH0/38XdA3IYjcMxM+DGY/Fd9eANLD//y+OrgFF7G8RUy+ILjwPdtJv7v9/Of83M8QBea93AwFQGCLWIgDTcoxhP1AfO8QPP/j+/+L5v+ZfCJC3gQEI/P9DxWZugKr/lch6////n7wQDd/0/3/nBylGchFU7AOEd1zB4j2QAqsCavhs//8R0ND/JUgaoGJgDf+KmGrBgj+gNjxg32lgBbRWBkkDVAys4bfYfqjfhWdPA2nY0MS0hPP//0nnkTRAxSA2wEWPMqiDNBSA3Pf/J7IFUDGYH9BiOghMT0S2ACqGQ4MamHZgQE5VELECBhZsGkgEJGsAAGrv1OEuwSp/AAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDE2LTA4LTIyVDAxOjUwOjM4LTA1OjAwopOCAgAAACV0RVh0ZGF0ZTptb2RpZnkAMjAxNi0wOC0yMlQwMTo1MDozOC0wNTowMNPOOr4AAAAhdEVYdHBzOkhpUmVzQm91bmRpbmdCb3gANjl4MTIrMjYxKzYyNGeCqF4AAAA3dEVYdHBzOkxldmVsAEFkb2JlRm9udC0xLjA6IEFyZXZTYW5zLU9ibGlxdWUgUmVsZWFzZSAwLjIxYQpiqkxdAAAAK3RFWHRwczpTcG90Q29sb3ItMABNYXRoRGVzaWduLUNILUJvbGQtU3ltYm9sLTEwK8b7iQAAAABJRU5ErkJggg==" alt="img" />になった割合です。</td>
+<td>d_overC</td>
+<td><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAAARBAAAAADCfRuBAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QADzoyPqMAAAAJcEhZcwAAAGQAAABkAA+Wxd0AAAAHdElNRQfgCBYBMiahLUkbAAABGklEQVQoz2P4TyJgoL6Gv/PQNST9/1+ArgpJ7A9DFky0mMEWpMH0/38XdA3IYjcMxM+DGY/Fd9eANLD//y+OrgFF7G8RUy+ILjwPdtJv7v9/Of83M8QBea93AwFQGCLWIgDTcoxhP1AfO8QPP/j+/+L5v+ZfCJC3gQEI/P9DxWZugKr/lch6////n7wQDd/0/3/nBylGchFU7AOEd1zB4j2QAqsCavhs//8R0ND/JUgaoGJgDf+KmGrBgj+gNjxg32lgBbRWBkkDVAys4bfYfqjfhWdPA2nY0MS0hPP//0nnkTRAxSA2wEWPMqiDNBSA3Pf/J7IFUDGYH9BiOghMT0S2ACqGQ4MamHZgQE5VELECBhZsGkgEJGsAAGrv1OEuwSp/AAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDE2LTA4LTIyVDAxOjUwOjM4LTA1OjAwopOCAgAAACV0RVh0ZGF0ZTptb2RpZnkAMjAxNi0wOC0yMlQwMTo1MDozOC0wNTowMNPOOr4AAAAhdEVYdHBzOkhpUmVzQm91bmRpbmdCb3gANjl4MTIrMjYxKzYyNGeCqF4AAAA3dEVYdHBzOkxldmVsAEFkb2JlRm9udC0xLjA6IEFyZXZTYW5zLU9ibGlxdWUgUmVsZWFzZSAwLjIxYQpiqkxdAAAAK3RFWHRwczpTcG90Q29sb3ItMABNYXRoRGVzaWduLUNILUJvbGQtU3ltYm9sLTEwK8b7iQAAAABJRU5ErkJggg==" alt="img" />になった割合です。</td>
 </tr>
 </tbody>
 </table>
@@ -218,6 +219,7 @@ $(document).ready(function () {
 $(document).ready(function () {
   $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
 });
+
 
 </script>
 

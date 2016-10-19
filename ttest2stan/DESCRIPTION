@@ -1,9 +1,9 @@
 Package: ttest2stan
 Type: Package
-Title: What the package does (short line)
+Title: Bayesian inference for between two groups
 Version: 1.0
 Date: 2016-10-19
-Author: Who wrote it
-Maintainer: Who to complain to <yourfault@somewhere.net>
+Author: @kosugitti
+Maintainer: Koji E. Kosugi <kosugitti@gmail.com>
 Description: More about what it does (maybe more than one line)
 License: What license is it under?
